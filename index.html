@@ -3,473 +3,799 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mabutsi Kgaogelo Kgagara - Portfolio</title>
-    <link rel="icon" type="ico" href="images/logo.ico">
-    <link rel="stylesheet" href="css/style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Mabutsi Kgaogelo Kgagara — Portfolio</title>
+    <meta name="description" content="Computer Science & Economics Graduate | Junior Software Developer | Data Analyst based in South Africa">
+    <link rel="icon" type="image/x-icon" href="images/logo.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header class="header">
-        <a href="#" class="logo"><i>KGAGARA<br></i><small>Tech of Tomorrow</small></a>
-        <div class="menu-toggle"><i class='bx bx-menu'></i></div>
-        <nav class="navbar">
-            <a href="#" style="--i:1" class="active">Home</a>
-            <a href="#about" style="--i:2">About</a>
-            <a href="#services" style="--i:3">Services</a>
-            <a href="#skills" style="--i:4">Skills</a>
-            <a href="#certifications" style="--i:7">Certificates</a>
-            <a href="#portfolio" style="--i:5">Portfolio</a>
-            <a href="#contact" style="--i:6">Contact</a>  
-        </nav>
-    </header>
 
-    <section class="home">
-        <div class="home-content">
-            <h3>Hello, It's Me</h3>
-            <h1>MABUTSI KGAOGELO KGAGARA</h1>
-            <h3>And I am a <span class="text"></span></h3>
-            <p>Computer Science and Economics <b>Graduate</b></p>
-            <div class="home-sci">
-                <a href="https://github.com/Kgaogelo02" style="--i:7"><i class='bx bxl-github'></i></a>
-                <a href="https://wa.me/+27660503098" style="--i:8"><i class='bx bxl-whatsapp'></i></a>
-                <a href="mailto: mabutsikgaogelo@gmail.com" style="--i:9"><i class='bx bxl-gmail'></i></a>
-                <a href="https://www.linkedin.com/in/mabutsi-kgaogelo-kgagara-340467321/" style="--i:10"><i class='bx bxl-linkedin' ></i></a>
+<!-- ══ PRELOADER ══════════════════════════════════════════════ -->
+<div class="preloader" id="preloader">
+    <div class="preloader-inner">
+        <div class="preloader-ring"></div>
+        <span class="preloader-initials">MK</span>
+    </div>
+</div>
+
+<!-- ══ HEADER ════════════════════════════════════════════════ -->
+<header class="header" id="header">
+    <a href="#home" class="logo">
+        <span class="logo-mark">MK</span>
+        <span class="logo-name">Kgagara</span>
+    </a>
+
+    <nav class="navbar" id="navbar">
+        <a href="#home"           class="nav-link active">Home</a>
+        <a href="#about"          class="nav-link">About</a>
+        <a href="#services"       class="nav-link">Services</a>
+        <a href="#skills"         class="nav-link">Skills</a>
+        <a href="#certifications" class="nav-link">Certificates</a>
+        <a href="#portfolio"      class="nav-link">Portfolio</a>
+        <a href="#contact"        class="nav-link">Contact</a>
+    </nav>
+
+    <div class="header-cta">
+        <a href="images/cv.pdf" download class="cv-btn">
+            <i class="bx bx-download"></i> Resume
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</header>
+
+<div class="nav-backdrop" id="navBackdrop"></div>
+
+<!-- ══ HOME ══════════════════════════════════════════════════ -->
+<section class="home" id="home">
+    <div class="home-bg">
+        <div class="bg-dot-grid"></div>
+        <div class="bg-glow glow-1"></div>
+        <div class="bg-glow glow-2"></div>
+    </div>
+
+    <div class="home-inner">
+        <!-- Left: text -->
+        <div class="home-text">
+            <div class="availability-badge">
+                <span class="pulse-dot"></span>
+                Open to opportunities
             </div>
-            <a href="#about" class="btn-box">More About Me</a>
-        </div>
-        <span class="home-imgHover"></span>
-    </section>
+            <p class="home-greeting">Hello, I'm</p>
+            <h1 class="home-name">Mabutsi Kgaogelo<br><em>Kgagara</em></h1>
+            <h2 class="home-role">I'm a <span class="typed-target"></span></h2>
+            <p class="home-bio">CS &amp; Economics graduate from North-West University — bridging technical development with analytical thinking to build meaningful solutions.</p>
 
-    <section class="about" id="about">
-        <div class="about-img">
-            <img src="images/wallpaper.png" alt="Mabutsi Kgaogelo Kgagara">
-        </div>
-        <div class="about-text">
-            <h2>About <span>Me</span></h2>
-            <p>Hi everyone! My name is Mabutsi Kgaogelo Kgagara. I hold a Bachelor's degree in <b>Computer Science and Economics</b>, from North-West University, equipping me with both technical programming skills and analytical problem-solving abilities. My academic training has provided strong foundations in:</p>
-            <ul>
-                <li><b>Programming Languages:</b> Java, Python, SQL, C++</li>
-                <li><b>Web Technologies:</b> HTML, CSS, JavaScript</li>
-                <li><b>Data Analysis:</b> Econometrics, Power BI, Pandas & NumPy</li>
-                <li><b>Technical Concepts:</b> Data Structures, Algorithms, OOP, APIs, Git & GitHub</li>
-                <li><b>Economic Principles:</b> Monetary Policy, Fiscal Analysis</li>
-            </ul>
-            <p>Beyond my coursework, I'm actively expanding my knowledge in software development, introduction to cybersecurity and Web design through online certifications and self-study. I'm particularly interested in opportunities where I can apply both my technical and analytical skills to solve real business challenges.</p>
-            <p>I'm currently looking for graduate programs, internships, or entry-level positions where I can contribute while continuing to develop my professional skills.</p>
-            <a href="#contact" class="btn-box">Contact Me</a>
-        </div>
-    </section>
+            <div class="home-cta">
+                <a href="#portfolio" class="btn-primary">View My Work</a>
+                <a href="#contact"   class="btn-outline">Get In Touch</a>
+            </div>
 
-    <section class="services" id="services">
-        <div class="container">
-            <h1 class="sub-title">My <span>Services</span></h1>
-            <div class="services-list">
-                <div>
-                   <i class='bx bx-code' style='color:#00eeff'></i>
-                   <h2>Software Development</h2>
-                   <p>Writing clean, structured code in Java and Python, focusing on OOP concepts and small-scale applications.</p>
-                   <a href="#contact" class="read">Contact me</a>
-                </div>
-
-                <div>
-                   <i class='bx bx-data' style='color:#00eeff'></i>
-                   <h2>SQL & Databases</h2>
-                   <p>Designing and querying relational databases, writing SQL scripts, and supporting data-driven applications.</p>
-                   <a href="#contact" class="read">Contact me</a>
-                </div>
-
-                <div>
-                   <i class='bx bx-bar-chart-alt' style='color:#00eeff'></i>
-                   <h2>Data Analysis</h2>
-                   <p>Cleaning, modeling, and visualizing data using Excel, Power BI, and EViews to support data-driven decisions and uncover key insights.</p>
-                   <a href="#contact" class="read">Contact me</a>
-                </div>
-
-                <div>
-                   <i class='bx bxl-visual-studio' style='color:#00eeff'></i>
-                   <h2>Web Development</h2>
-                   <p>Building responsive websites using HTML, CSS, JavaScript, and modern frameworks for simple web apps and dashboards.</p>
-                   <a href="#contact" class="read">Contact me</a>
-                </div>
-
-                <div>
-                   <i class='bx bx-desktop' style='color:#00eeff'></i>
-                   <h2>Internships & Graduate Programs</h2>
-                   <p>Open to internships and graduate trainee roles in data, software, and technology, with eagerness to learn and grow in a professional environment.</p>
-                   <a href="#contact" class="read">Contact me</a>
-                </div>
+            <div class="home-socials">
+                <a href="https://github.com/Kgaogelo02" target="_blank" rel="noopener" aria-label="GitHub">
+                    <i class="bx bxl-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/mabutsi-kgaogelo-kgagara-340467321/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                    <i class="bx bxl-linkedin"></i>
+                </a>
+                <a href="https://wa.me/+27660503098" target="_blank" rel="noopener" aria-label="WhatsApp">
+                    <i class="bx bxl-whatsapp"></i>
+                </a>
+                <a href="mailto:mabutsikgaogelo@gmail.com" aria-label="Email">
+                    <i class="bx bxl-gmail"></i>
+                </a>
             </div>
         </div>
-    </section>
 
-    <section class="skills-section" id="skills">
-        <h1 class="sub-title">My <span>Skills</span></h1>
-        <div class="skills-container">
-            <div class="container1">
-                <h2 class="heading1">Technical Skills</h2>
-                <div class="Technical-bars">
-                    <div class="bar"><i style="color: #c95d2e" class='bx bxl-html5'></i>
-                    <div class="info"><span>HTML</span></div>
-                    <div class="progress-line html"><span></span></div>
-                    </div>
-
-                    <div class="bar"><i style="color: #147bbc" class='bx bxl-css3'></i>
-                        <div class="info"><span>CSS</span></div>
-                        <div class="progress-line css"><span></span></div>
-                    </div>
-
-                    <div class="bar"><i style="color: #c322c9" class='bx bxl-python'></i>
-                    <div class="info"><span>Python</span></div>
-                    <div class="progress-line python"><span></span></div>
-                    </div>
-
-                    <div class="bar"><i style="color: #007396" class='bx bxl-java'></i>
-                       <div class="info"><span>Java</span></div>
-                       <div class="progress-line java"><span></span></div>
-                    </div>
-
-                    <div class="bar"><i style="color: #00b8a3" class='bx bx-data'></i>
-                       <div class="info"><span>SQL</span></div>
-                       <div class="progress-line sql"><span></span></div>
-                    </div>
-
-                    <div class="bar"><i style="color: #3e8e41" class='bx bx-terminal'></i>
-                        <div class="info"><span>Linux</span></div>
-                        <div class="progress-line linux"><span></span></div>
-                    </div>
-                </div>
+        <!-- Right: image -->
+        <div class="home-visual">
+            <div class="hero-img-wrap">
+                <img src="images/wallpaper.png" alt="Mabutsi Kgaogelo Kgagara">
+                <div class="hero-img-ring"></div>
             </div>
-        
-            <div class="container1">
-                <h2 class="heading1">Professional Skills</h2>
-                <div class="radial-bars">
-                    <div class="radial-bar">
-                        <svg x="0px" y="0px" viewBox="0 0 200 200">
-                            <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-                            <circle class="path path-1" cx="100" cy="100" r="80"></circle>
-                        </svg>
-                            <div class="percentage">90%</div>
-                            <div class="text">Creativity</div>
-                    </div>
-                    <div class="radial-bar">
-                        <svg x="0px" y="0px" viewBox="0 0 200 200">
-                            <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-                            <circle class="path path-2" cx="100" cy="100" r="80"></circle>
-                        </svg>
-                        <div class="percentage">80%</div>
-                        <div class="text">Communication</div>
-                    </div>            
-                    <div class="radial-bar">
-                        <svg x="0px" y="0px" viewBox="0 0 200 200">
-                            <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-                            <circle class="path path-3" cx="100" cy="100" r="80"></circle>
-                        </svg>
-                        <div class="percentage">75%</div>
-                        <div class="text">Problem-solving</div>
-                    </div>
-                    <div class="radial-bar">
-                        <svg x="0px" y="0px" viewBox="0 0 200 200">
-                            <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-                            <circle class="path path-4" cx="100" cy="100" r="80"></circle>
-                        </svg>
-                        <div class="percentage">85%</div>
-                        <div class="text">TeamWork</div>
-                    </div>
-                </div>
-            </div>
+            <div class="float-chip chip-a"><i class="bx bxl-java"></i> Java Dev</div>
+            <div class="float-chip chip-b"><i class="bx bx-bar-chart-alt-2"></i> Data Analyst</div>
         </div>
-    </section>
+    </div>
 
-    <!-- Certifications Section -->
-<section id="certifications" class="certifications">
-    <div class="container">
-        <h2 class="sub-title">My <span>Certifications</span></h2>
-        <p class="certifications-intro">Here are the certifications I've completed in 2025 to enhance my skills and knowledge.</p>
-        
-        <div class="certifications-container">
-            <!-- Certification 1 -->
-            <div class="certification-card">
-                <div class="certification-header">
-                    <div class="certification-icon">
-                        <i class='bx bx-data'></i>
-                    </div>
-                    <h3>Introduction to Data Science</h3>
-                    <p class="certification-provider">Cisco Networking Academy</p>
-                </div>
-                <div class="certification-body">
-                    <p class="certification-desc">Fundamentals of data science, data analysis, and visualization techniques.</p>
-                    <div class="certification-date">
-                        <i class='bx bx-calendar'></i>
-                        <span>Completed: September 2025</span>
-                    </div>
-                    <div class="certification-credential">
-                        <i class='bx bx-link-external'></i>
-                        <a href="https://www.netacad.com/certificates?issuanceId=385cb39f-3f91-44d4-81cb-920f0fd8a849" target="_blank">View Credential</a>
+    <a href="#about" class="scroll-down-cue">
+        <i class="bx bx-mouse"></i>
+        <span>Scroll</span>
+    </a>
+</section>
+
+<!-- ══ STATS STRIP ═══════════════════════════════════════════ -->
+<div class="stats-strip">
+    <div class="stats-inner">
+        <div class="stat">
+            <strong class="stat-num" data-target="8">0</strong>
+            <span>Projects Built</span>
+        </div>
+        <div class="stat-sep"></div>
+        <div class="stat">
+            <strong class="stat-num" data-target="7">0</strong>
+            <span>Certifications</span>
+        </div>
+        <div class="stat-sep"></div>
+        <div class="stat">
+            <strong class="stat-num" data-target="5">0</strong>
+            <span>Services</span>
+        </div>
+        <div class="stat-sep"></div>
+        <div class="stat">
+            <strong class="stat-num" data-target="4">0</strong>
+            <span>Languages</span>
+        </div>
+    </div>
+</div>
+
+<!-- ══ ABOUT ══════════════════════════════════════════════════ -->
+<section class="about section-gap" id="about">
+    <div class="wrap">
+        <div class="about-layout">
+
+            <!-- Photo -->
+            <div class="about-img-col reveal-left">
+                <div class="about-img-frame">
+                    <img src="images/wallpaper.png" alt="Mabutsi Kgaogelo Kgagara">
+                    <div class="frame-accent"></div>
+                    <div class="grad-badge">
+                        <span class="grad-year">2025</span>
+                        <span>Graduate<br>NWU</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Certification 2 -->
-            <div class="certification-card">
-                <div class="certification-header">
-                    <div class="certification-icon">
-                        <i class='bx bx-code-alt'></i>
+            <!-- Text -->
+            <div class="about-text-col reveal-right">
+                <p class="eyebrow">Who I Am</p>
+                <h2 class="h-title">About <em>Me</em></h2>
+                <p class="about-intro">
+                    I hold a Bachelor's degree in <strong>Computer Science and Economics</strong> from North-West University — a combination that gives me both the technical ability to build and the analytical mindset to make data-driven decisions.
+                </p>
+
+                <div class="skills-snapshot">
+                    <div class="snap-item">
+                        <i class="bx bx-code-alt"></i>
+                        <div>
+                            <strong>Programming</strong>
+                            <span>Java · Python · SQL · C++</span>
+                        </div>
                     </div>
-                    <h3>Full Stack Development</h3>
-                    <p class="certification-provider">FNB App Academy</p>
+                    <div class="snap-item">
+                        <i class="bx bx-globe"></i>
+                        <div>
+                            <strong>Web</strong>
+                            <span>HTML · CSS · JavaScript</span>
+                        </div>
+                    </div>
+                    <div class="snap-item">
+                        <i class="bx bx-bar-chart-alt-2"></i>
+                        <div>
+                            <strong>Data &amp; Analytics</strong>
+                            <span>Power BI · Pandas · NumPy · EViews · Econometrics · Data cleaning</span>
+                        </div>
+                    </div>
+                    <div class="snap-item">
+                        <i class="bx bx-git-branch"></i>
+                        <div>
+                            <strong>Tools</strong>
+                            <span>Git · OOP · REST APIs · Algorithms · VS Code</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="certification-body">
-                    <p class="certification-desc">Comprehensive full-stack development including frontend and backend technologies.</p>
-                    <div class="certification-date">
-                        <i class='bx bx-calendar'></i>
-                        <span>Completed: July 2025</span>
-                    </div>
-                    <div class="certification-credential">
-                        <i class='bx bx-link-external'></i>
-                        <a href="https://media.licdn.com/dms/image/v2/D4E2DAQHMFX3jVnuqnA/profile-treasury-image-shrink_1280_1280/B4EZgC_VEfHoAQ-/0/1752396815706?e=1757682000&v=beta&t=nxdkIyTnq1hCWl-oOoJxpNgYI7SJXotU3-Nd5zmpgo8" target="_blank">View Credential</a>
-                    </div>
+
+                <p>I am expanding my expertise into modern software frameworks and emerging technologies, and I am actively seeking <strong>graduate programs, internships, or entry-level</strong> roles where I can contribute meaningfully from day one.</p>
+
+                <div class="about-btns">
+                    <a href="#contact" class="btn-primary">Let's Talk</a>
+                    <a href="images/cv.pdf" download class="btn-ghost">
+                        <i class="bx bx-download"></i> Download CV
+                    </a>
                 </div>
             </div>
 
-            <!-- Certification 3 -->
-            <div class="certification-card">
-                <div class="certification-header">
-                    <div class="certification-icon">
-                        <i class='bx bx-stats'></i>
-                    </div>
-                    <h3>SQL & Relational Databases</h3>
-                    <p class="certification-provider">Cognitive Class - IBM</p>
-                </div>
-                <div class="certification-body">
-                    <p class="certification-desc">Database design, SQL queries, and relational database management.</p>
-                    <div class="certification-date">
-                        <i class='bx bx-calendar'></i>
-                        <span>Completed: April 2025</span>
-                    </div>
-                    <div class="certification-credential">
-                        <i class='bx bx-link-external'></i>
-                        <a href="https://courses.cognitiveclass.ai/certificates/d6c140756b764b07b8589941ef82579c" target="_blank">View Credential</a>
-                    </div>
-                </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══ SERVICES ═══════════════════════════════════════════════ -->
+<section class="services section-gap" id="services">
+    <div class="wrap">
+        <div class="sec-head reveal-up">
+            <p class="eyebrow">What I Do</p>
+            <h2 class="h-title">My <em>Services</em></h2>
+        </div>
+
+        <div class="services-grid">
+            <div class="svc-card reveal-up" style="--del:0ms">
+                <div class="svc-icon"><i class="bx bx-code-block"></i></div>
+                <h3>Software Development</h3>
+                <p>Clean, structured code in Java and Python with strong OOP principles and scalable application architecture.</p>
+                <a href="#contact" class="svc-cta">Get in touch <i class="bx bx-right-arrow-alt"></i></a>
             </div>
 
-            <!-- Certification 4 -->
-            <div class="certification-card">
-                <div class="certification-header">
-                    <div class="certification-icon">
-                        <i class='bx bx-devices'></i>
-                    </div>
-                    <h3>Responsive Web Design</h3>
-                    <p class="certification-provider">freeCodeCamp</p>
-                </div>
-                <div class="certification-body">
-                    <p class="certification-desc">Creating websites that work well on all device sizes and screen resolutions.</p>
-                    <div class="certification-date">
-                        <i class='bx bx-calendar'></i>
-                        <span>Completed: April 2025</span>
-                    </div>
-                    <div class="certification-credential">
-                        <i class='bx bx-link-external'></i>
-                        <a href="https://freecodecamp.org/certification/Mabutsi/responsive-web-design" target="_blank">View Credential</a>
-                    </div>
-                </div>
+            <div class="svc-card reveal-up" style="--del:80ms">
+                <div class="svc-icon"><i class="bx bx-data"></i></div>
+                <h3>SQL &amp; Databases</h3>
+                <p>Designing relational databases, writing optimised SQL scripts, and supporting data-driven applications end to end.</p>
+                <a href="#contact" class="svc-cta">Get in touch <i class="bx bx-right-arrow-alt"></i></a>
             </div>
 
-            <!-- Certification 5 -->
-            <div class="certification-card">
-                <div class="certification-header">
-                    <div class="certification-icon">
-                        <i class='bx bx-shield'></i>
-                    </div>
-                    <h3>Introduction to Cybersecurity</h3>
-                    <p class="certification-provider">Cisco Networking Academy</p>
-                </div>
-                <div class="certification-body">
-                    <p class="certification-desc">Fundamentals of cybersecurity, threats, vulnerabilities, and security measures.</p>
-                    <div class="certification-date">
-                        <i class='bx bx-calendar'></i>
-                        <span>Completed: April 2025</span>
-                    </div>
-                    <div class="certification-credential">
-                        <i class='bx bx-link-external'></i>
-                        <a href="https://www.netacad.com/certificates?issuanceId=1abadbca-93a5-4698-b69c-5479a51c0835" target="_blank">View Credential</a>
-                    </div>
-                </div>
+            <div class="svc-card reveal-up" style="--del:160ms">
+                <div class="svc-icon"><i class="bx bx-bar-chart-alt-2"></i></div>
+                <h3>Data Analysis</h3>
+                <p>Performing data cleaning, transformation, and visualization using Python, Excel, and Power BI to uncover actionable business insights</p>
+                <a href="#contact" class="svc-cta">Get in touch <i class="bx bx-right-arrow-alt"></i></a>
             </div>
 
-            <!-- Certification 6 -->
-            <div class="certification-card">
-                <div class="certification-header">
-                    <div class="certification-icon">
-                        <i class='bx bx-wifi'></i>
-                    </div>
-                    <h3>Introduction to IoT</h3>
-                    <p class="certification-provider">Cisco Networking Academy</p>
-                </div>
-                <div class="certification-body">
-                    <p class="certification-desc">Internet of Things fundamentals, devices, connectivity, and applications.</p>
-                    <div class="certification-date">
-                        <i class='bx bx-calendar'></i>
-                        <span>Completed: April 2025</span>
-                    </div>
-                    <div class="certification-credential">
-                        <i class='bx bx-link-external'></i>
-                        <a href="https://www.netacad.com/certificates?issuanceId=00ac033e-bc22-4e29-baef-4199c685d9b3" target="_blank">View Credential</a>
-                    </div>
-                </div>
+            <div class="svc-card reveal-up" style="--del:240ms">
+                <div class="svc-icon"><i class="bx bx-window-alt"></i></div>
+                <h3>Web Development</h3>
+                <p>Responsive, accessible websites using HTML, CSS, and JavaScript for portfolios, apps, and interactive dashboards.</p>
+                <a href="#contact" class="svc-cta">Get in touch <i class="bx bx-right-arrow-alt"></i></a>
             </div>
 
-            <!-- Certification 7 -->
-            <div class="certification-card">
-                <div class="certification-header">
-                    <div class="certification-icon">
-                        <i class='bx bx-lock-alt'></i>
-                    </div>
-                    <h3>Diploma in Cyber Security</h3>
-                    <p class="certification-provider">Alison</p>
-                </div>
-                <div class="certification-body">
-                    <p class="certification-desc">Comprehensive cybersecurity principles, practices, and defense strategies.</p>
-                    <div class="certification-date">
-                        <i class='bx bx-calendar'></i>
-                        <span>Completed: June 2025</span>
-                    </div>
-                    <div class="certification-credential">
-                        <i class='bx bx-link-external'></i>
-                        <a href="https://alison.com/certification/check/91f891cfc2" target="_blank">View Credential</a>
-                    </div>
-                </div>
+            <div class="svc-card svc-card--accent reveal-up" style="--del:320ms">
+                <div class="svc-icon"><i class="bx bx-rocket"></i></div>
+                <h3>Graduate &amp; Internship Roles</h3>
+                <p>Open to graduate trainee roles in data, software, and technology — bringing academic rigour and genuine eagerness to grow professionally.</p>
+                <a href="#contact" class="svc-cta">Let's talk <i class="bx bx-right-arrow-alt"></i></a>
             </div>
         </div>
     </div>
 </section>
 
-    <section id="portfolio">
-        <div class="main-text">
-            <h2>Latest <span>Projects</span></h2>
+<!-- ══ SKILLS ═════════════════════════════════════════════════ -->
+<section class="skills-section section-gap" id="skills">
+    <div class="wrap">
+        <div class="sec-head reveal-up">
+            <p class="eyebrow">Expertise</p>
+            <h2 class="h-title">My <em>Skills</em></h2>
         </div>
-        <div class="portfolio-content">
-            <!-- Cryptocurrency Trading Algorithm Project -->
-            <div class="row">
-                <img src="images/crypto-trading.jpg" alt="Cryptocurrency Trading Algorithm">
-                <div class="layer">
-                    <h5>Cryptocurrency Trading Algorithm</h5>
-                    <p>A Python-based algorithmic trading strategy for Bitcoin using Simple Moving Averages (SMA) crossovers with backtesting and performance analysis.</p>
-                    <div class="tech-stack">
-                        <span>Python</span>
-                        <span>Streamlit</span>
-                        <span>Pandas</span>
-                        <span>yfinance</span>
-                    </div>
-                    <a href="https://cryptocurrency-trading-algorithm-b5n3bryx4bguiuac7lw4xp.streamlit.app/" target="_blank"><i class='bx bx-link-external'></i></a>
-                </div>
-            </div>
-            
-            <!-- Economic Indicators Visualizer Project -->
-            <div class="row">
-                <img src="images/economic-indicators.jpg" alt="Economic Indicators Visualizer">
-                <div class="layer">
-                    <h5>Economic Indicators Visualizer</h5>
-                    <p>A Streamlit web app for exploring World Bank economic data across multiple countries with interactive visualizations of key economic indicators.</p>
-                    <div class="tech-stack">
-                        <span>Python</span>
-                        <span>Streamlit</span>
-                        <span>Plotly</span>
-                        <span>World Bank API</span>
-                    </div>
-                    <a href="https://economic-indicators-visualizer-nhnpmneywg2rvepyjybwsx.streamlit.app/" target="_blank"><i class='bx bx-link-external'></i></a>
-                </div>
-            </div>
-            <div class="row">
-                <img src="images/cityzoo.jpg" alt="Pine City Zoo Project">
-                <div class="layer">
-                    <h5>Pine City Zoo</h5>
-                    <p>A creative web project built with HTML and CSS that introduces users to various animals, zoo locations, maps, and weather information.</p>
-                    <div class="tech-stack">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                </div>
-                    <a href="https://kgaogelo02.github.io/Pine-City-Zoo/"><i class='bx bx-link-external'></i></a>
-                </div>
-            </div>
-            <div class="row">
-                <img src="images/currencyconverter.jpg" alt="Currency Converter Project">
-                <div class="layer">
-                    <h5>Currency Converter</h5>
-                    <p>A simple yet effective JavaScript-based tool that allows users to convert between different currencies using real-time exchange rates.</p>
-                    <div class="tech-stack">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
-                    <span>ExchangeRate API</span>
-                </div>
-                    <a href="https://kgaogelo02.github.io/Currency-Converter/"><i class='bx bx-link-external'></i></a>
-                </div>
-            </div>
-            <div class="row">
-                <img src="images/fnb.jpg" alt="FNB App Academy Project">
-                <div class="layer">
-                    <h5>FNB App Academy</h5>
-                    <p>A collection of weekly web development tasks and projects completed during the FNB App Academy program.</p>
-                    <div class="tech-stack">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
-                    <span>Git</span>
-                    <span>Backend Development</span>
-                </div>
-                    <a href="https://github.com/Kgaogelo02/FNB-Academy-2025"><i class='bx bx-link-external'></i></a>
-                </div>
-            </div>
-            <div class="row">
-                <img src="images/hero.jpg" alt="Superhero App Project">
-                <div class="layer">
-                    <h5>Superhero App</h5>
-                    <p>A responsive web application showcasing superhero profiles with images and biographies using only HTML and CSS.</p>
-                    <div class="tech-stack">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                </div>
-                    <a href="https://kgaogelo02.github.io/superhero-app/"><i class='bx bx-link-external'></i></a>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section class="contact" id="contact">
-        <div class="contact-text">
-            <h2>Contact <span>Me</span></h2>
-            <h4>Let's work together</h4>
-            <p>Thanks for visiting my portfolio! If you have any questions, ideas, or want to work together, feel free to send me a message using this form. I'll get back to you as soon as I can.🙂</p>
-            <ul class="contact-list">
-                <li><i class="bx bxs-send"></i>mabutsikgaogelo@gmail.com</li>
-                <li><i class="bx bxs-phone"></i>+27 66 050 3098</li>
-            </ul>
-            <div class="contact-icons">
-                <a href="https://github.com/Kgaogelo02"><i class="bx bxl-github"></i></a>
-                <a href="https://wa.me/+27660503098"><i class="bx bxl-whatsapp"></i></a>
-                <a href="mailto: mabutsikgaogelo@gmail.com"><i class="bx bxl-gmail"></i></a>
-                <a href="https://www.linkedin.com/in/mabutsi-kgaogelo-kgagara-340467321/"><i class="bx bxl-linkedin"></i></a>
-            </div>
-        </div>
-    
-        <div class="contact-form">
-            <form action="https://formspree.io/f/xwpbnqjz" method="POST">
-                <input type="text" name="name" placeholder="Enter Your Name" required>
-                <input type="email" name="email" placeholder="Enter Your Email" required>
-                <input type="text" name="subject" placeholder="Enter Your Subject">
-                <textarea name="message" placeholder="Enter Your Message" required></textarea>
-                <input type="submit" value="Submit" class="send">
-            </form>
-        </div>
-    </section>
+        <div class="skills-layout">
 
-    <div class="last-text">
-        <p>Developed by Mabutsi &copy; 2025</p>
+            <!-- Technical bars -->
+            <div class="skill-panel reveal-left">
+                <h3 class="panel-title">Technical Skills</h3>
+                <div class="bar-list">
+                    <div class="bar-item">
+                        <div class="bar-label">
+                            <span><i class="bx bxl-html5" style="color:#e34c26"></i> HTML</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="bar-track"><div class="bar-fill" data-w="90"></div></div>
+                    </div>
+                    <div class="bar-item">
+                        <div class="bar-label">
+                            <span><i class="bx bxl-css3" style="color:#264de4"></i> CSS</span>
+                            <span>60%</span>
+                        </div>
+                        <div class="bar-track"><div class="bar-fill" data-w="60"></div></div>
+                    </div>
+                    <div class="bar-item">
+                        <div class="bar-label">
+                            <span><i class="bx bxl-python" style="color:#3776ab"></i> Python</span>
+                            <span>50%</span>
+                        </div>
+                        <div class="bar-track"><div class="bar-fill" data-w="50"></div></div>
+                    </div>
+                    <div class="bar-item">
+                        <div class="bar-label">
+                            <span><i class="bx bxl-java" style="color:#007396"></i> Java</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="bar-track"><div class="bar-fill" data-w="75"></div></div>
+                    </div>
+                    <div class="bar-item">
+                        <div class="bar-label">
+                            <span><i class="bx bx-data" style="color:#00b8a3"></i> SQL</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="bar-track"><div class="bar-fill" data-w="80"></div></div>
+                    </div>
+                    <div class="bar-item">
+                        <div class="bar-label">
+                            <span><i class="bx bx-terminal" style="color:#3e8e41"></i> Linux</span>
+                            <span>40%</span>
+                        </div>
+                        <div class="bar-track"><div class="bar-fill" data-w="40"></div></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Professional rings -->
+            <div class="skill-panel reveal-right">
+                <h3 class="panel-title">Professional Skills</h3>
+                <div class="rings-grid">
+                    <div class="ring-item">
+                        <div class="ring-wrap">
+                            <svg viewBox="0 0 100 100">
+                                <circle class="r-bg"   cx="50" cy="50" r="40"/>
+                                <circle class="r-fill" cx="50" cy="50" r="40" data-pct="90"/>
+                            </svg>
+                            <span class="r-pct">90%</span>
+                        </div>
+                        <p>Creativity</p>
+                    </div>
+                    <div class="ring-item">
+                        <div class="ring-wrap">
+                            <svg viewBox="0 0 100 100">
+                                <circle class="r-bg"   cx="50" cy="50" r="40"/>
+                                <circle class="r-fill" cx="50" cy="50" r="40" data-pct="80"/>
+                            </svg>
+                            <span class="r-pct">80%</span>
+                        </div>
+                        <p>Communication</p>
+                    </div>
+                    <div class="ring-item">
+                        <div class="ring-wrap">
+                            <svg viewBox="0 0 100 100">
+                                <circle class="r-bg"   cx="50" cy="50" r="40"/>
+                                <circle class="r-fill" cx="50" cy="50" r="40" data-pct="75"/>
+                            </svg>
+                            <span class="r-pct">75%</span>
+                        </div>
+                        <p>Problem Solving</p>
+                    </div>
+                    <div class="ring-item">
+                        <div class="ring-wrap">
+                            <svg viewBox="0 0 100 100">
+                                <circle class="r-bg"   cx="50" cy="50" r="40"/>
+                                <circle class="r-fill" cx="50" cy="50" r="40" data-pct="85"/>
+                            </svg>
+                            <span class="r-pct">85%</span>
+                        </div>
+                        <p>Teamwork</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
-    <a href="#" class="top"><i class='bx bx-up-arrow-alt'></i></a>
-    
-    <script src="js/script.js"></script>
+</section>
+
+<!-- ══ CERTIFICATIONS ═════════════════════════════════════════ -->
+<section class="certs section-gap" id="certifications">
+    <div class="wrap">
+        <div class="sec-head reveal-up">
+            <p class="eyebrow">Credentials</p>
+            <h2 class="h-title">My <em>Certifications</em></h2>
+            <p class="sec-sub">Completed in 2025 — sharpening skills across development, data, and security.</p>
+        </div>
+
+        <div class="certs-grid">
+
+            <div class="cert-card reveal-up" style="--del:0ms">
+                <div class="cert-head">
+                    <div class="cert-icon"><i class="bx bx-data"></i></div>
+                    <div>
+                        <h3>Introduction to Data Science</h3>
+                        <p class="cert-org">Cisco Networking Academy</p>
+                    </div>
+                </div>
+                <p class="cert-desc">Fundamentals of data science, analysis, and visualization techniques.</p>
+                <div class="cert-foot">
+                    <span><i class="bx bx-calendar"></i> Sep 2025</span>
+                    <a href="https://www.netacad.com/certificates?issuanceId=385cb39f-3f91-44d4-81cb-920f0fd8a849" target="_blank" rel="noopener">View <i class="bx bx-link-external"></i></a>
+                </div>
+            </div>
+
+            <div class="cert-card reveal-up" style="--del:70ms">
+                <div class="cert-head">
+                    <div class="cert-icon"><i class="bx bx-code-alt"></i></div>
+                    <div>
+                        <h3>Full Stack Development</h3>
+                        <p class="cert-org">FNB App Academy</p>
+                    </div>
+                </div>
+                <p class="cert-desc">Comprehensive full-stack development including frontend and backend technologies.</p>
+                <div class="cert-foot">
+                    <span><i class="bx bx-calendar"></i> Jul 2025</span>
+                    <a href="https://media.licdn.com/dms/image/v2/D4E2DAQHMFX3jVnuqnA/profile-treasury-image-shrink_1280_1280/B4EZgC_VEfHoAQ-/0/1752396815706?e=1757682000&v=beta&t=nxdkIyTnq1hCWl-oOoJxpNgYI7SJXotU3-Nd5zmpgo8" target="_blank" rel="noopener">View <i class="bx bx-link-external"></i></a>
+                </div>
+            </div>
+
+            <div class="cert-card reveal-up" style="--del:140ms">
+                <div class="cert-head">
+                    <div class="cert-icon"><i class="bx bx-server"></i></div>
+                    <div>
+                        <h3>SQL &amp; Relational Databases</h3>
+                        <p class="cert-org">Cognitive Class — IBM</p>
+                    </div>
+                </div>
+                <p class="cert-desc">Database design, SQL queries, and relational database management systems.</p>
+                <div class="cert-foot">
+                    <span><i class="bx bx-calendar"></i> Apr 2025</span>
+                    <a href="https://courses.cognitiveclass.ai/certificates/d6c140756b764b07b8589941ef82579c" target="_blank" rel="noopener">View <i class="bx bx-link-external"></i></a>
+                </div>
+            </div>
+
+            <div class="cert-card reveal-up" style="--del:210ms">
+                <div class="cert-head">
+                    <div class="cert-icon"><i class="bx bx-devices"></i></div>
+                    <div>
+                        <h3>Responsive Web Design</h3>
+                        <p class="cert-org">freeCodeCamp</p>
+                    </div>
+                </div>
+                <p class="cert-desc">Creating websites that work seamlessly on all device sizes and screen resolutions.</p>
+                <div class="cert-foot">
+                    <span><i class="bx bx-calendar"></i> Apr 2025</span>
+                    <a href="https://freecodecamp.org/certification/Mabutsi/responsive-web-design" target="_blank" rel="noopener">View <i class="bx bx-link-external"></i></a>
+                </div>
+            </div>
+
+            <div class="cert-card reveal-up" style="--del:280ms">
+                <div class="cert-head">
+                    <div class="cert-icon"><i class="bx bx-shield-quarter"></i></div>
+                    <div>
+                        <h3>Introduction to Cybersecurity</h3>
+                        <p class="cert-org">Cisco Networking Academy</p>
+                    </div>
+                </div>
+                <p class="cert-desc">Fundamentals of cybersecurity, threats, vulnerabilities, and security measures.</p>
+                <div class="cert-foot">
+                    <span><i class="bx bx-calendar"></i> Apr 2025</span>
+                    <a href="https://www.netacad.com/certificates?issuanceId=1abadbca-93a5-4698-b69c-5479a51c0835" target="_blank" rel="noopener">View <i class="bx bx-link-external"></i></a>
+                </div>
+            </div>
+
+            <div class="cert-card reveal-up" style="--del:350ms">
+                <div class="cert-head">
+                    <div class="cert-icon"><i class="bx bx-wifi"></i></div>
+                    <div>
+                        <h3>Introduction to IoT</h3>
+                        <p class="cert-org">Cisco Networking Academy</p>
+                    </div>
+                </div>
+                <p class="cert-desc">Internet of Things fundamentals, devices, connectivity, and real-world applications.</p>
+                <div class="cert-foot">
+                    <span><i class="bx bx-calendar"></i> Apr 2025</span>
+                    <a href="https://www.netacad.com/certificates?issuanceId=00ac033e-bc22-4e29-baef-4199c685d9b3" target="_blank" rel="noopener">View <i class="bx bx-link-external"></i></a>
+                </div>
+            </div>
+
+            <div class="cert-card reveal-up" style="--del:420ms">
+                <div class="cert-head">
+                    <div class="cert-icon"><i class="bx bx-lock-alt"></i></div>
+                    <div>
+                        <h3>Diploma in Cyber Security</h3>
+                        <p class="cert-org">Alison</p>
+                    </div>
+                </div>
+                <p class="cert-desc">Comprehensive cybersecurity principles, practices, and defence strategies.</p>
+                <div class="cert-foot">
+                    <span><i class="bx bx-calendar"></i> Jun 2025</span>
+                    <a href="https://alison.com/certification/check/91f891cfc2" target="_blank" rel="noopener">View <i class="bx bx-link-external"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ══ PORTFOLIO ══════════════════════════════════════════════ -->
+<section class="portfolio section-gap" id="portfolio">
+    <div class="wrap">
+        <div class="sec-head reveal-up">
+            <p class="eyebrow">Work</p>
+            <h2 class="h-title">Latest <em>Projects</em></h2>
+            <p class="sec-sub">A curated selection showcasing full-stack development, data analysis, and systems design.</p>
+        </div>
+
+        <div class="port-filters reveal-up">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="python">Python</button>
+            <button class="filter-btn" data-filter="java">Java</button>
+            <button class="filter-btn" data-filter="web">Web</button>
+            <button class="filter-btn" data-filter="data">Data</button>
+        </div>
+
+        <div class="port-grid">
+
+            <!-- 1. Fitness Club — Featured -->
+            <article class="port-card port-card--featured reveal-up" data-cat="python web" style="--del:0ms">
+                <div class="port-img">
+                    <img src="images/fitness-club.jpg" alt="Online Fitness Club Management System">
+                    <div class="port-overlay">
+                        <a href="https://fitness-club-jfd8.onrender.com/login" target="_blank" rel="noopener" class="port-ext">
+                            <i class="bx bx-link-external"></i>
+                        </a>
+                    </div>
+                    <span class="port-badge">Featured</span>
+                </div>
+                <div class="port-body">
+                    <div class="port-tags">
+                        <span>Python</span><span>Flask</span><span>SQLite</span><span>HTML/CSS</span>
+                    </div>
+                    <h3>Fitness Club Management System</h3>
+                    <p>Full-stack Flask web app managing members, trainers, classes, payments, and check-ins — a complete CRUD system with a relational database backend.</p>
+                    <a href="https://fitness-club-jfd8.onrender.com/login" target="_blank" rel="noopener" class="port-link">
+                        Live Demo <i class="bx bx-right-arrow-alt"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- 2. Desktop Booking System — Featured -->
+            <article class="port-card port-card--featured reveal-up" data-cat="java" style="--del:80ms">
+                <div class="port-img">
+                    <img src="images/booking-system.jpg" alt="Desktop Booking Management System">
+                    <div class="port-overlay">
+                        <a href="https://github.com/Kgaogelo02/desktop-booking-system" target="_blank" rel="noopener" class="port-ext">
+                            <i class="bx bx-link-external"></i>
+                        </a>
+                    </div>
+                    <span class="port-badge">Featured</span>
+                </div>
+                <div class="port-body">
+                    <div class="port-tags">
+                        <span>Java</span><span>JavaFX</span><span>SQLite</span><span>OOP</span>
+                    </div>
+                    <h3>Desktop Booking System</h3>
+                    <p>JavaFX desktop application for managing bookings with a full SQLite database — demonstrates OOP design, GUI development, and database integration in Java.</p>
+                    <a href="https://github.com/Kgaogelo02/desktop-booking-system" target="_blank" rel="noopener" class="port-link">
+                        GitHub <i class="bx bx-right-arrow-alt"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- 3. Data Dashboard — Featured -->
+            <article class="port-card port-card--featured reveal-up" data-cat="python data" style="--del:160ms">
+                <div class="port-img">
+                    <img src="images/data-dashboard.jpg" alt="Interactive Data Dashboard">
+                    <div class="port-overlay">
+                        <a href="https://data-dashboard-ixwt7jzl8kpeknnseo5oga.streamlit.app/" target="_blank" rel="noopener" class="port-ext">
+                            <i class="bx bx-link-external"></i>
+                        </a>
+                    </div>
+                    <span class="port-badge">Featured</span>
+                </div>
+                <div class="port-body">
+                    <div class="port-tags">
+                        <span>Python</span><span>Streamlit</span><span>SQLite</span><span>Plotly</span>
+                    </div>
+                    <h3>Interactive Data Dashboard</h3>
+                    <p>Production-ready web app for interactive data exploration, analysis, and visualization — built with Streamlit, SQLite, and Plotly for rich, real-time charts.</p>
+                    <a href="https://data-dashboard-ixwt7jzl8kpeknnseo5oga.streamlit.app/" target="_blank" rel="noopener" class="port-link">
+                        Live Demo <i class="bx bx-right-arrow-alt"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- 4. Cryptocurrency Trading Algorithm -->
+            <article class="port-card reveal-up" data-cat="python data" style="--del:240ms">
+                <div class="port-img">
+                    <img src="images/crypto-trading.jpg" alt="Cryptocurrency Trading Algorithm">
+                    <div class="port-overlay">
+                        <a href="https://cryptocurrency-trading-algorithm-b5n3bryx4bguiuac7lw4xp.streamlit.app/" target="_blank" rel="noopener" class="port-ext">
+                            <i class="bx bx-link-external"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="port-body">
+                    <div class="port-tags">
+                        <span>Python</span><span>Streamlit</span><span>Pandas</span><span>yfinance</span>
+                    </div>
+                    <h3>Cryptocurrency Trading Algorithm</h3>
+                    <p>Bitcoin SMA crossover strategy with backtesting and full performance analytics — deployed live on Streamlit Cloud.</p>
+                    <a href="https://cryptocurrency-trading-algorithm-b5n3bryx4bguiuac7lw4xp.streamlit.app/" target="_blank" rel="noopener" class="port-link">
+                        Live Demo <i class="bx bx-right-arrow-alt"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- 5. Economic Indicators Visualizer -->
+            <article class="port-card reveal-up" data-cat="python data" style="--del:320ms">
+                <div class="port-img">
+                    <img src="images/economic-indicators.jpg" alt="Economic Indicators Visualizer">
+                    <div class="port-overlay">
+                        <a href="https://economic-indicators-visualizer-nhnpmneywg2rvepyjybwsx.streamlit.app/" target="_blank" rel="noopener" class="port-ext">
+                            <i class="bx bx-link-external"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="port-body">
+                    <div class="port-tags">
+                        <span>Python</span><span>Streamlit</span><span>Plotly</span><span>World Bank API</span>
+                    </div>
+                    <h3>Economic Indicators Visualizer</h3>
+                    <p>Interactive explorer for World Bank economic data across Africa and beyond, with multi-country comparisons and dynamic Plotly charts.</p>
+                    <a href="https://economic-indicators-visualizer-nhnpmneywg2rvepyjybwsx.streamlit.app/" target="_blank" rel="noopener" class="port-link">
+                        Live Demo <i class="bx bx-right-arrow-alt"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- 6. Currency Converter -->
+            <article class="port-card reveal-up" data-cat="web" style="--del:400ms">
+                <div class="port-img">
+                    <img src="images/currencyconverter.jpg" alt="Currency Converter">
+                    <div class="port-overlay">
+                        <a href="https://kgaogelo02.github.io/Currency-Converter/" target="_blank" rel="noopener" class="port-ext">
+                            <i class="bx bx-link-external"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="port-body">
+                    <div class="port-tags">
+                        <span>JavaScript</span><span>HTML</span><span>CSS</span><span>ExchangeRate API</span>
+                    </div>
+                    <h3>Currency Converter</h3>
+                    <p>Real-time currency conversion tool powered by a live exchange rate API — clean UI with instant conversion across global currencies.</p>
+                    <a href="https://kgaogelo02.github.io/Currency-Converter/" target="_blank" rel="noopener" class="port-link">
+                        Live Demo <i class="bx bx-right-arrow-alt"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- 7. FNB App Academy -->
+            <article class="port-card reveal-up" data-cat="web" style="--del:480ms">
+                <div class="port-img">
+                    <img src="images/fnb.jpg" alt="FNB App Academy 2025">
+                    <div class="port-overlay">
+                        <a href="https://github.com/Kgaogelo02/FNB-App-Academy-2025" target="_blank" rel="noopener" class="port-ext">
+                            <i class="bx bx-link-external"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="port-body">
+                    <div class="port-tags">
+                        <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Backend</span>
+                    </div>
+                    <h3>FNB App Academy 2025</h3>
+                    <p>9-week full-stack bootcamp journey — weekly folders of code, notes, and mini-projects covering frontend through to backend development.</p>
+                    <a href="https://github.com/Kgaogelo02/FNB-App-Academy-2025" target="_blank" rel="noopener" class="port-link">
+                        GitHub <i class="bx bx-right-arrow-alt"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- 8. Inventory App -->
+            <article class="port-card reveal-up" data-cat="web" style="--del:560ms">
+                <div class="port-img">
+                    <img src="images/inventory.jpg" alt="Inventory Management App">
+                    <div class="port-overlay">
+                        <a href="https://github.com/Kgaogelo02/inventory_app" target="_blank" rel="noopener" class="port-ext">
+                            <i class="bx bx-link-external"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="port-body">
+                    <div class="port-tags">
+                        <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                    </div>
+                    <h3>Inventory Management App</h3>
+                    <p>A browser-based inventory tool for tracking stock, items, and quantities — built with a clean, functional interface.</p>
+                    <a href="https://github.com/Kgaogelo02/inventory_app" target="_blank" rel="noopener" class="port-link">
+                        GitHub <i class="bx bx-right-arrow-alt"></i>
+                    </a>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- ══ CONTACT ════════════════════════════════════════════════ -->
+<section class="contact section-gap" id="contact">
+    <div class="wrap">
+        <div class="sec-head reveal-up">
+            <p class="eyebrow">Get In Touch</p>
+            <h2 class="h-title">Contact <em>Me</em></h2>
+        </div>
+
+        <div class="contact-layout">
+
+            <!-- Info side -->
+            <div class="contact-info reveal-left">
+                <h3>Let's work together</h3>
+                <p>Have a project idea, internship opportunity, or just want to connect? I'd love to hear from you — I respond within 24 hours.</p>
+
+                <div class="contact-items">
+                    <a href="mailto:mabutsikgaogelo@gmail.com" class="c-item">
+                        <div class="c-icon"><i class="bx bx-envelope"></i></div>
+                        <div class="c-text">
+                            <span>Email</span>
+                            <strong>mabutsikgaogelo@gmail.com</strong>
+                        </div>
+                    </a>
+                    <a href="https://wa.me/+27660503098" target="_blank" rel="noopener" class="c-item">
+                        <div class="c-icon"><i class="bx bxl-whatsapp"></i></div>
+                        <div class="c-text">
+                            <span>WhatsApp</span>
+                            <strong>+27 66 050 3098</strong>
+                        </div>
+                    </a>
+                    <a href="https://www.linkedin.com/in/mabutsi-kgaogelo-kgagara-340467321/" target="_blank" rel="noopener" class="c-item">
+                        <div class="c-icon"><i class="bx bxl-linkedin"></i></div>
+                        <div class="c-text">
+                            <span>LinkedIn</span>
+                            <strong>Mabutsi Kgaogelo Kgagara</strong>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="c-socials">
+                    <a href="https://github.com/Kgaogelo02" target="_blank" rel="noopener" aria-label="GitHub">
+                        <i class="bx bxl-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/mabutsi-kgaogelo-kgagara-340467321/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                        <i class="bx bxl-linkedin"></i>
+                    </a>
+                    <a href="https://wa.me/+27660503098" target="_blank" rel="noopener" aria-label="WhatsApp">
+                        <i class="bx bxl-whatsapp"></i>
+                    </a>
+                    <a href="mailto:mabutsikgaogelo@gmail.com" aria-label="Email">
+                        <i class="bx bxl-gmail"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Form side -->
+            <div class="contact-form-box reveal-right">
+                <form id="contact-form" action="https://formspree.io/f/xwpbnqjz" method="POST">
+                    <div class="form-row">
+                        <div class="f-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your name" required>
+                        </div>
+                        <div class="f-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                        </div>
+                    </div>
+                    <div class="f-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="What's this about?">
+                    </div>
+                    <div class="f-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Tell me about your project or opportunity..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary btn-submit">
+                        Send Message <i class="bx bx-send"></i>
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ══ FOOTER ═════════════════════════════════════════════════ -->
+<footer class="footer">
+    <div class="footer-inner">
+        <a href="#home" class="f-logo">
+            <span class="logo-mark">MK</span> Kgagara
+        </a>
+        <p>&copy; <span id="year"></span> Mabutsi Kgaogelo Kgagara. All rights reserved.</p>
+        <div class="f-socials">
+            <a href="https://github.com/Kgaogelo02" target="_blank" rel="noopener" aria-label="GitHub">
+                <i class="bx bxl-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/mabutsi-kgaogelo-kgagara-340467321/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <i class="bx bxl-linkedin"></i>
+            </a>
+            <a href="mailto:mabutsikgaogelo@gmail.com" aria-label="Email">
+                <i class="bx bxl-gmail"></i>
+            </a>
+        </div>
+    </div>
+</footer>
+
+<!-- Back to top -->
+<button class="back-to-top" id="backTop" aria-label="Back to top">
+    <i class="bx bx-chevron-up"></i>
+</button>
+
+<script src="js/script.js"></script>
 </body>
 </html>
