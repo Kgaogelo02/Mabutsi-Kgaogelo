@@ -1,18 +1,19 @@
 'use strict';
 
 /* ══════════════════════════════════════════════════════════════
-   TYPED.JS
+   TYPED.JS — updated strings to match new identity
 ══════════════════════════════════════════════════════════════ */
 new Typed('.typed-target', {
     strings: [
-        'Computer Science Graduate',
-        'Junior Software Developer',
-        'Data Analyst'
+        'BSc Computer Science & Economics Graduate',
+        'Software Developer',
+        'Java & Python Developer',
+        'Data-Driven Programmer',
     ],
-    typeSpeed:   60,
-    backSpeed:   40,
-    backDelay:   2200,
-    loop:        true,
+    typeSpeed:      60,
+    backSpeed:      40,
+    backDelay:      2200,
+    loop:           true,
     smartBackspace: true,
 });
 
@@ -35,7 +36,7 @@ window.addEventListener('load', () => {
 });
 
 /* ══════════════════════════════════════════════════════════════
-   HEADER — scroll + active nav
+   HEADER — scroll state + active nav link
 ══════════════════════════════════════════════════════════════ */
 const header   = document.getElementById('header');
 const backTop  = document.getElementById('backTop');
@@ -43,13 +44,13 @@ const sections = [...document.querySelectorAll('section[id]')];
 const navLinks = [...document.querySelectorAll('.nav-link')];
 
 function onScroll() {
-    // Sticky header
-    header.classList.toggle('scrolled', window.scrollY > 20);
+    // Sticky glass header
+    if (header) header.classList.toggle('scrolled', window.scrollY > 20);
 
     // Back-to-top button
     if (backTop) backTop.classList.toggle('visible', window.scrollY > 500);
 
-    // Active nav link
+    // Active nav link tracking
     let current = '';
     sections.forEach(sec => {
         if (window.scrollY >= sec.offsetTop - 160) current = sec.id;
@@ -83,11 +84,7 @@ function closeNav() {
     document.body.style.overflow = '';
 }
 
-if (hamburger) {
-    hamburger.addEventListener('click', () => {
-        navbar.classList.contains('open') ? closeNav() : openNav();
-    });
-}
+if (hamburger)   hamburger.addEventListener('click', () => navbar.classList.contains('open') ? closeNav() : openNav());
 if (navBackdrop) navBackdrop.addEventListener('click', closeNav);
 navLinks.forEach(link => link.addEventListener('click', closeNav));
 
@@ -97,7 +94,6 @@ navLinks.forEach(link => link.addEventListener('click', closeNav));
 document.addEventListener('click', e => {
     const anchor = e.target.closest('a[href^="#"]');
     if (!anchor) return;
-
     const id = anchor.getAttribute('href');
 
     if (id === '#' || id === '#home') {
@@ -115,7 +111,7 @@ document.addEventListener('click', e => {
 });
 
 /* ══════════════════════════════════════════════════════════════
-   SCROLL REVEAL (IntersectionObserver)
+   SCROLL REVEAL
 ══════════════════════════════════════════════════════════════ */
 const revealObs = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -160,45 +156,6 @@ const statsStrip = document.querySelector('.stats-strip');
 if (statsStrip) statsObs.observe(statsStrip);
 
 /* ══════════════════════════════════════════════════════════════
-   SKILL BAR ANIMATION
-══════════════════════════════════════════════════════════════ */
-const barsObs = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.querySelectorAll('.bar-fill').forEach(fill => {
-                fill.style.width = fill.dataset.w + '%';
-            });
-            barsObs.unobserve(entry.target);
-        }
-    });
-}, { threshold: 0.3 });
-
-const skillsLayout = document.querySelector('.skills-layout');
-if (skillsLayout) barsObs.observe(skillsLayout);
-
-/* ══════════════════════════════════════════════════════════════
-   RING CHART ANIMATION
-   Circumference = 2 * π * r = 2 * π * 40 ≈ 251.2
-══════════════════════════════════════════════════════════════ */
-const CIRCUMFERENCE = 2 * Math.PI * 40;
-
-const ringsObs = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.querySelectorAll('.r-fill').forEach(circle => {
-                const pct    = parseFloat(circle.dataset.pct);
-                const offset = CIRCUMFERENCE - (pct / 100) * CIRCUMFERENCE;
-                circle.style.strokeDashoffset = offset;
-            });
-            ringsObs.unobserve(entry.target);
-        }
-    });
-}, { threshold: 0.3 });
-
-const ringsGrid = document.querySelector('.rings-grid');
-if (ringsGrid) ringsObs.observe(ringsGrid);
-
-/* ══════════════════════════════════════════════════════════════
    PORTFOLIO FILTER
 ══════════════════════════════════════════════════════════════ */
 const filterBtns = document.querySelectorAll('.filter-btn');
@@ -206,7 +163,6 @@ const portCards  = document.querySelectorAll('.port-card');
 
 filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-        // Update active button
         filterBtns.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
 
@@ -218,11 +174,9 @@ filterBtns.forEach(btn => {
 
             if (match) {
                 card.style.display = '';
-                // Small timeout so display:'' applies before class re-adds reveal transition
                 requestAnimationFrame(() => card.classList.remove('hidden'));
             } else {
                 card.classList.add('hidden');
-                // Hide after the fade-out transition completes
                 setTimeout(() => {
                     if (card.classList.contains('hidden')) card.style.display = 'none';
                 }, 420);
@@ -232,7 +186,7 @@ filterBtns.forEach(btn => {
 });
 
 /* ══════════════════════════════════════════════════════════════
-   CONTACT FORM — loading UX only (Formspree handles actual send)
+   CONTACT FORM — loading UX
 ══════════════════════════════════════════════════════════════ */
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {
@@ -241,8 +195,6 @@ if (contactForm) {
         const original = btn.innerHTML;
         btn.innerHTML  = 'Sending… <i class="bx bx-loader-alt bx-spin"></i>';
         btn.disabled   = true;
-        // Formspree will redirect after this — button reset isn't strictly needed
-        // but handle edge cases (e.g. validation failure) gracefully
         setTimeout(() => {
             btn.innerHTML = original;
             btn.disabled  = false;
@@ -250,9 +202,7 @@ if (contactForm) {
     });
 }
 
-/* ══════════════════════════════════════════════════════════════
-   BACK TO TOP
-══════════════════════════════════════════════════════════════ */
+/* BACK TO TOP */
 if (backTop) {
     backTop.addEventListener('click', () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
