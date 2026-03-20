@@ -5,9 +5,9 @@
 ══════════════════════════════════════════════════════════════ */
 new Typed('.typed-target', {
     strings: [
-        'BSc Computer Science & Economics Graduate',
+        'BSc Computer Science and Economics Graduate',
         'Software Developer',
-        'Java & Python Developer',
+        'Java and Python Developer',
         'Data-Driven Programmer',
     ],
     typeSpeed:      60,
