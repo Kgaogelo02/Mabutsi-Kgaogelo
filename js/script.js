@@ -1,8 +1,4 @@
 'use strict';
-
-/* ══════════════════════════════════════════════════════════════
-   TYPED.JS — updated strings to match new identity
-══════════════════════════════════════════════════════════════ */
 new Typed('.typed-target', {
     strings: [
         'BSc Computer Science and Economics Graduate',
@@ -17,15 +13,9 @@ new Typed('.typed-target', {
     smartBackspace: true,
 });
 
-/* ══════════════════════════════════════════════════════════════
-   FOOTER YEAR
-══════════════════════════════════════════════════════════════ */
 const yearEl = document.getElementById('year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-/* ══════════════════════════════════════════════════════════════
-   PRELOADER
-══════════════════════════════════════════════════════════════ */
 window.addEventListener('load', () => {
     const pl = document.getElementById('preloader');
     if (!pl) return;
@@ -35,22 +25,16 @@ window.addEventListener('load', () => {
     }, 500);
 });
 
-/* ══════════════════════════════════════════════════════════════
-   HEADER — scroll state + active nav link
-══════════════════════════════════════════════════════════════ */
 const header   = document.getElementById('header');
 const backTop  = document.getElementById('backTop');
 const sections = [...document.querySelectorAll('section[id]')];
 const navLinks = [...document.querySelectorAll('.nav-link')];
 
 function onScroll() {
-    // Sticky glass header
     if (header) header.classList.toggle('scrolled', window.scrollY > 20);
 
-    // Back-to-top button
     if (backTop) backTop.classList.toggle('visible', window.scrollY > 500);
 
-    // Active nav link tracking
     let current = '';
     sections.forEach(sec => {
         if (window.scrollY >= sec.offsetTop - 160) current = sec.id;
@@ -63,9 +47,6 @@ function onScroll() {
 
 window.addEventListener('scroll', onScroll, { passive: true });
 
-/* ══════════════════════════════════════════════════════════════
-   MOBILE NAV
-══════════════════════════════════════════════════════════════ */
 const hamburger   = document.getElementById('hamburger');
 const navbar      = document.getElementById('navbar');
 const navBackdrop = document.getElementById('navBackdrop');
@@ -88,9 +69,6 @@ if (hamburger)   hamburger.addEventListener('click', () => navbar.classList.cont
 if (navBackdrop) navBackdrop.addEventListener('click', closeNav);
 navLinks.forEach(link => link.addEventListener('click', closeNav));
 
-/* ══════════════════════════════════════════════════════════════
-   SMOOTH SCROLL
-══════════════════════════════════════════════════════════════ */
 document.addEventListener('click', e => {
     const anchor = e.target.closest('a[href^="#"]');
     if (!anchor) return;
@@ -110,9 +88,6 @@ document.addEventListener('click', e => {
     }
 });
 
-/* ══════════════════════════════════════════════════════════════
-   SCROLL REVEAL
-══════════════════════════════════════════════════════════════ */
 const revealObs = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -125,9 +100,6 @@ const revealObs = new IntersectionObserver((entries) => {
 document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right')
     .forEach(el => revealObs.observe(el));
 
-/* ══════════════════════════════════════════════════════════════
-   STATS COUNTER
-══════════════════════════════════════════════════════════════ */
 let countersRan = false;
 const counters  = document.querySelectorAll('.stat-num');
 
@@ -155,9 +127,6 @@ const statsObs = new IntersectionObserver(entries => {
 const statsStrip = document.querySelector('.stats-strip');
 if (statsStrip) statsObs.observe(statsStrip);
 
-/* ══════════════════════════════════════════════════════════════
-   PORTFOLIO FILTER
-══════════════════════════════════════════════════════════════ */
 const filterBtns = document.querySelectorAll('.filter-btn');
 const portCards  = document.querySelectorAll('.port-card');
 
@@ -185,9 +154,6 @@ filterBtns.forEach(btn => {
     });
 });
 
-/* ══════════════════════════════════════════════════════════════
-   CONTACT FORM — loading UX
-══════════════════════════════════════════════════════════════ */
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {
     contactForm.addEventListener('submit', function () {
@@ -202,7 +168,6 @@ if (contactForm) {
     });
 }
 
-/* BACK TO TOP */
 if (backTop) {
     backTop.addEventListener('click', () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
